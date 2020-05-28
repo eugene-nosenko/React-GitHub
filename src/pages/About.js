@@ -1,5 +1,7 @@
 import React from "react";
 
+// https://getbootstrap.com/docs/4.5/components/jumbotron/
+
 export const About = () => {
   return (
     <div className="jumbotron">
