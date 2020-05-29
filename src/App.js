@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { About } from "./pages/About";
 import { Profile } from "./pages/Profile";
-import { Alert } from "./pages/Alert";
+import { Alert } from "./components/Alert";
 import { AlertState } from "./context/alert/AlertState";
 import { GithubState } from "./context/github/GithubState";
 
