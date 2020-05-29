@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AlertContext } from "../context/alert/alertContext";
 
 // https://getbootstrap.com/docs/4.5/components/alerts/
 
-export const Alert = ({ alert }) => {
+export const Alert = () => {
+  const { alert, hide } = useContext(AlertContext);
+  if (!alert) return null;
+
   return (
     <div
       className={`alert alert-${
@@ -11,7 +15,7 @@ export const Alert = ({ alert }) => {
       role="alert"
     >
       <strong>Holy guacamole!</strong> {alert.text}
-      <button type="button" className="close" aria-label="Close">
+      <button type="button" className="close" aria-label="Close" onClick={hide}>
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
